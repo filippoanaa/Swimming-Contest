@@ -6,7 +6,7 @@ import com.clientServer.entities.Participant;
 import com.clientServer.entities.Participation;
 import com.clientServer.entities.SwimmingRace;
 import com.clientServer.entities.Tuple;
-import ro.mpp2024.repository.JdbcUtils;
+import com.clientServer.JdbcUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
