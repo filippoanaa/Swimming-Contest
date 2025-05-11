@@ -1,0 +1,37 @@
+.root {
+    -fx-background-image: url("appvImg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.label{
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+
+}
+
+.button:pressed{
+    -fx-background-color: #003f7f;
+}
+
+.table-view{
+    -fx-border-color: #007bff;
+}
+
+.table-view:selected{
+    -fx-background-color: #0056b3;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #007bff;
+
+}

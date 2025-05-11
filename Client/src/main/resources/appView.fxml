@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane prefHeight="593.0" prefWidth="526.0" stylesheets="style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clientServer.gui.AppController">
+    <padding><Insets bottom="10" left="10" right="10" top="10" /></padding>
+    <hgap>10</hgap>
+    <vgap>10</vgap>
+
+    <VBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Label text="Add Participant to Race" />
+        <HBox spacing="10">
+            <Label text="Name:" />
+            <TextField fx:id="participantNameTextField" />
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Age:" />
+            <TextField fx:id="participantAgeTextField" />
+        </HBox>
+        <Button onAction="#handleAddParticipantToSwimmingRaces" text="Add Participant" />
+    </VBox>
+
+    <VBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="Swimming Races" />
+        <TableView fx:id="swimmingRacesTable">
+            <columns>
+                <TableColumn fx:id="distanceColumn" text="Distance" />
+                <TableColumn fx:id="styleColumn" text="Style" />
+                <TableColumn fx:id="numberOfParticipantsColumn" text="Number of Participants" />
+            </columns>
+        </TableView>
+    </VBox>
+
+    <VBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <Label text="Search Participants by Race" />
+        <HBox spacing="10">
+            <Label text="Distance:" />
+            <ComboBox fx:id="comboBoxDistance" />
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Style:" />
+            <ComboBox fx:id="comboBoxStyle" />
+        </HBox>
+        <Button onAction="#handleSearchParticipantsFromSwimmingRace" text="Search" />
+    </VBox>
+
+    <VBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Label text="Participants" />
+        <TableView fx:id="participantsTable">
+            <columns>
+                <TableColumn fx:id="participantNameColumn" text="Name" />
+                <TableColumn fx:id="participantAgeColumn" text="Age" />
+                <TableColumn fx:id="numberOfRaceColumn" text="Number of Races" />
+            </columns>
+        </TableView>
+    </VBox>
+   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="248.0" text="Log out" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#handleLogout" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+
+
+</GridPane>
